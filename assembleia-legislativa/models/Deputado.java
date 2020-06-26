@@ -7,7 +7,7 @@ public class Deputado {
     private double salarioLiquido;
     private Funcionario[] funcionarios;
 
-    public Deputado(String nome, String partido, double salarioBruto, double salarioLiquido, int quantidadeDeFuncionarios, Funcionario[] funcionarios) {
+    public Deputado(String nome, String partido, double salarioBruto, double salarioLiquido, int quantidadeDeFuncionarios) {
         this.nome = nome;
         this.partido = partido;
         this.salarioBruto = salarioBruto;
