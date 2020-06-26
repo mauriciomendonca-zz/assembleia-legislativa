@@ -1,6 +1,6 @@
 import models.*;
 
-public class App {
+public class Principal {
     public static void main(String[] args) throws Exception {
         Estadual dep1 = new Estadual("Dep1", "PPT", 20.3, 20.3, 12, "RS");
         Federal dep2 = new Federal("Dep1", "PPS", 25.000, 32.000, 34, 123);
@@ -12,5 +12,11 @@ public class App {
         Federal dep8 = new Federal("Dep1", "WHM", 25.000, 29.000, 4, 654);
         Estadual dep9 = new Estadual("Dep1", "GRE", 10.000, 8.000, 9, "SC");
         Estadual dep10 = new Estadual("Dep1", "MIO", 21.000, 16.800, 32, "RJ");
+
+        Deputado[] deputados = {dep1, dep2, dep3, dep3, dep4, dep5, dep6, dep7, dep8, dep9, dep10};
+
+        ProcuraCorruptos procura = new ProcuraCorruptos(deputados);
+        System.out.println(procura.deputadosComMaisFuncionarios().length);
+
     }
 }
