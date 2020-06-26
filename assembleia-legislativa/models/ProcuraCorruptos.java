@@ -21,8 +21,23 @@ public class ProcuraCorruptos {
         for (Deputado deputado : deputados) {
             if (deputado.getFuncionarios().length > 10) {
                 deputadosComMaisFuncionarios[i] = deputado;
+                i++;
             }
         }
         return deputadosComMaisFuncionarios;
+    }
+
+    public Deputado[] deputadosQueRecebemValores() {
+        int i =0;
+        Deputado[] deputadosQueRecebemValores = new Deputado[deputados.length];
+        for (Deputado deputado : deputados) {
+            for (Funcionario funcionario : deputado.getFuncionarios()) {
+                if (funcionario.getSalarioLiquido() < ((funcionario.getSalarioBruto() * 70) / 100)) {
+                    deputadosQueRecebemValores[i] = deputado;
+                    i++;
+                }
+            }
+        }
+        return deputadosQueRecebemValores;
     }
 }
