@@ -7,13 +7,13 @@ public class Deputado {
     private double salarioLiquido;
     private Funcionario[] funcionarios;
 
-    public Deputado(String nome, String partido, double salarioBruto, double salarioLiquido, int quantidadeDeFuncionarios) {
+    public Deputado(String nome, String partido, double salarioBruto, double salarioLiquido, int quantidadeFuncionarios) {
         this.nome = nome;
         this.partido = partido;
         this.salarioBruto = salarioBruto;
         this.salarioLiquido = salarioLiquido;
 
-        this.funcionarios = new Funcionario[quantidadeDeFuncionarios];
+        this.funcionarios = new Funcionario[quantidadeFuncionarios];
         for (int i = 0; i < funcionarios.length; i++) {
             double bruto = geraFuncionarios()[0];
             double liquido = geraFuncionarios()[1];

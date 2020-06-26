@@ -3,8 +3,8 @@ package models;
 public class Estadual extends Deputado {
     protected String uf;
 
-    public Estadual(String nome, String partido, double salarioBruto, double salarioLiquido, Funcionario[] funcionarios, String uf) {
-        super(nome, partido, salarioBruto, salarioLiquido, funcionarios);
+    public Estadual(String nome, String partido, double salarioBruto, double salarioLiquido, int quantidadeFuncionarios, String uf) {
+        super(nome, partido, salarioBruto, salarioLiquido, quantidadeFuncionarios);
         this.uf = uf;
     }
 
