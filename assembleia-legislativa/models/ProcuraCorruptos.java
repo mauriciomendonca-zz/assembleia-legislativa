@@ -44,8 +44,8 @@ public class ProcuraCorruptos {
     public Deputado[] deputadosQueDesviamVerbas() {
         int i = 0;
         Deputado[] deputadosQueDesviamVerbas = new Deputado[deputados.length];
-        for (Deputado deputado : deputadosQueDesviamVerbas) {
-            if (deputado.getSalarioLiquido() > ((deputado.getSalarioBruto() * 70) / 100)) {
+        for (Deputado deputado : deputados) {
+            if (deputado.getSalarioLiquido() > ((deputado.getSalarioBruto() * 80) / 100)) {
                 deputadosQueDesviamVerbas[i] = deputado;
                 i++;
             }
