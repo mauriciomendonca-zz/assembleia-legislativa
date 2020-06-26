@@ -1,22 +1,12 @@
 package models;
 
 public class Funcionario {
-    private String nome;
     private double salarioBruto;
     private double salarioLiquido;
 
-    public Funcionario(String nome, double salarioBruto, double salarioLiquido) {
-        this.nome = nome;
+    public Funcionario(double salarioBruto, double salarioLiquido) {
         this.salarioBruto = salarioBruto;
         this.salarioLiquido = salarioLiquido;
-    }
-
-    public String getNome(){
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public double getSalarioBruto() {
