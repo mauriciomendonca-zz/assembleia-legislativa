@@ -38,4 +38,12 @@ public class Deputado {
     public void setSalarioBruto(double salarioBruto) {
         this.salarioBruto = salarioBruto;
     }
+
+    public double getSalarioLiquido() {
+        return salarioLiquido;
+    }
+
+    public void setSalarioLiquido(double salarioLiquido) {
+        this.salarioLiquido = salarioLiquido;
+    }
 }
