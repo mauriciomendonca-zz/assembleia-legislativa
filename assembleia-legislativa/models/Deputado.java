@@ -46,4 +46,12 @@ public class Deputado {
     public void setSalarioLiquido(double salarioLiquido) {
         this.salarioLiquido = salarioLiquido;
     }
+
+    public Funcionario[] getFuncionarios() {
+        return funcionarios;
+    }
+
+    public void setFuncionarios(Funcionario[] funcionarios) {
+        this.funcionarios = funcionarios;
+    }
 }
