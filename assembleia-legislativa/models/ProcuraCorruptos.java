@@ -28,7 +28,7 @@ public class ProcuraCorruptos {
     }
 
     public Deputado[] deputadosQueRecebemValores() {
-        int i =0;
+        int i = 0;
         Deputado[] deputadosQueRecebemValores = new Deputado[deputados.length];
         for (Deputado deputado : deputados) {
             for (Funcionario funcionario : deputado.getFuncionarios()) {
@@ -39,5 +39,17 @@ public class ProcuraCorruptos {
             }
         }
         return deputadosQueRecebemValores;
+    }
+
+    public Deputado[] deputadosQueDesviamVerbas() {
+        int i = 0;
+        Deputado[] deputadosQueDesviamVerbas = new Deputado[deputados.length];
+        for (Deputado deputado : deputadosQueDesviamVerbas) {
+            if (deputado.getSalarioLiquido() > ((deputado.getSalarioBruto() * 70) / 100)) {
+                deputadosQueDesviamVerbas[i] = deputado;
+                i++;
+            }
+        }
+        return deputadosQueDesviamVerbas;
     }
 }
