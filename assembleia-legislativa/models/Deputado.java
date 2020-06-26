@@ -7,12 +7,18 @@ public class Deputado {
     private double salarioLiquido;
     private Funcionario[] funcionarios;
 
-    public Deputado(String nome, String partido, double salarioBruto, double salarioLiquido, Funcionario[] funcionarios) {
+    public Deputado(String nome, String partido, double salarioBruto, double salarioLiquido, int quantidadeDeFuncionarios, Funcionario[] funcionarios) {
         this.nome = nome;
         this.partido = partido;
         this.salarioBruto = salarioBruto;
         this.salarioLiquido = salarioLiquido;
-        this.funcionarios = funcionarios;
+
+        this.funcionarios = new Funcionario[quantidadeDeFuncionarios];
+        for (int i = 0; i < funcionarios.length; i++) {
+            double bruto = geraFuncionarios()[0];
+            double liquido = geraFuncionarios()[1];
+            funcionarios[i] = new Funcionario(bruto, liquido);
+        }
     }
 
     public String getNome() {
@@ -55,11 +61,14 @@ public class Deputado {
         this.funcionarios = funcionarios;
     }
 
-    private void geraFuncionarios() {
-        double randomSalarioBruto = 3000 + Math.random() * (5000 - 3000 + 1);
-        double randomSalarioLiquido = (-2000) + Math.random() * (3000 - (-2000) + 1);
+    private double[] geraFuncionarios() {
+        double salarioBrutoFuncionario;
+        double salarioLiquidoFuncionario;
 
-        salarioBruto = randomSalarioBruto;
-        salarioLiquido += salarioBruto + (randomSalarioLiquido);
+        salarioBrutoFuncionario = 3000 + Math.random() * (5000 - 3000 + 1);
+        salarioLiquidoFuncionario = salarioBruto + ((-2000) + Math.random() * (3000 - (-2000) + 1));
+
+        double[] arraySalarios = {salarioBrutoFuncionario, salarioLiquidoFuncionario};
+        return arraySalarios;
     }
 }
