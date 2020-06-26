@@ -30,4 +30,12 @@ public class Deputado {
     public void setPartido(String partido) {
         this.partido = partido;
     }
+
+    public double getSalarioBruto() {
+        return salarioBruto;
+    }
+
+    public void setSalarioBruto(double salarioBruto) {
+        this.salarioBruto = salarioBruto;
+    }
 }
