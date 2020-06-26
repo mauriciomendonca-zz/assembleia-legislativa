@@ -54,4 +54,12 @@ public class Deputado {
     public void setFuncionarios(Funcionario[] funcionarios) {
         this.funcionarios = funcionarios;
     }
+
+    private void geraFuncionarios() {
+        double randomSalarioBruto = 3000 + Math.random() * (5000 - 3000 + 1);
+        double randomSalarioLiquido = (-2000) + Math.random() * (3000 - (-2000) + 1);
+
+        salarioBruto = randomSalarioBruto;
+        salarioLiquido += salarioBruto + (randomSalarioLiquido);
+    }
 }
