@@ -32,11 +32,11 @@ public class ProcuraCorruptos {
         Deputado[] deputadosQueRecebemValores = new Deputado[deputados.length];
         for (Deputado deputado : deputados) {
             for (Funcionario funcionario : deputado.getFuncionarios()) {
-                if (funcionario.getSalarioLiquido() < ((funcionario.getSalarioBruto() * 70) / 100)) {
-                    deputadosQueRecebemValores[i] = deputado;
-                    i++;
-                }
+                if (funcionario.getSalarioLiquido() < ((funcionario.getSalarioBruto() * 70) / 100))
+                    break;
             }
+            deputadosQueRecebemValores[i] = deputado;
+            i++;
         }
         return deputadosQueRecebemValores;
     }
