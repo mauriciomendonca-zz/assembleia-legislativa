@@ -10,7 +10,7 @@ public class Principal {
         Estadual dep6 = new Estadual("Dep6", "PIL", 22.000, 17.600, 10, "SP");
         Federal dep7 = new Federal("Dep7", "KML", 32.000, 30.000, 10, 321);
         Federal dep8 = new Federal("Dep8", "WHM", 25.000, 29.000, 4, 654);
-        Estadual dep9 = new Estadual("Dep9", "GRE", 10.000, 8.000, 9, "SC");
+        Estadual dep9 = new Estadual("Dep9", "GRE", 10.000, 18.000, 9, "SC");
         Estadual dep10 = new Estadual("Dep10", "MIO", 21.000, 16.800, 32, "RJ");
 
         Deputado[] deputados = {dep1, dep2, dep3, dep4, dep5, dep6, dep7, dep8, dep9, dep10};
@@ -24,7 +24,7 @@ public class Principal {
             if (deputado instanceof Estadual) {
                 ((Estadual) deputado).getUf();
             } else if (deputado instanceof Federal) {
-                ((Federal) deputado).getNumeroCadastro();
+                System.out.println(((Federal) deputado).getNumeroCadastro());
             }
         }
 
