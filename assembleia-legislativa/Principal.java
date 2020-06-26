@@ -16,24 +16,34 @@ public class Principal {
         Deputado[] deputados = {dep1, dep2, dep3, dep4, dep5, dep6, dep7, dep8, dep9, dep10};
 
         ProcuraCorruptos procuraCorruptos = new ProcuraCorruptos(deputados);
-        Deputado[] deputadosDesviamVerbas = procuraCorruptos.deputadosQueDesviamVerbas();
         Deputado[] deputadosComMaisFuncionarios = procuraCorruptos.deputadosComMaisFuncionarios();
-        
-        System.out.println("Deputados que desviam verbas:");
-        for (Deputado deputado : deputadosDesviamVerbas) {
+        Deputado[] deputadosQueRecebemValores = procuraCorruptos.deputadosQueRecebemValores();
+        Deputado[] deputadosDesviamVerbas = procuraCorruptos.deputadosQueDesviamVerbas();
+
+        System.out.println("Deputados com mais funcionários:");
+        for (Deputado deputado : deputadosComMaisFuncionarios) {
             if (deputado instanceof Estadual) {
-                ((Estadual) deputado).getUf();
+                System.out.println(((Estadual) deputado).getUf());
             } else if (deputado instanceof Federal) {
                 System.out.println(((Federal) deputado).getNumeroCadastro());
             }
         }
 
-        System.out.println("Deputados com mais funcionários:");
-        for (Deputado deputado : deputadosComMaisFuncionarios) {
+        System.out.println("Deputados que recebem valores:");
+        for (Deputado deputado : deputadosQueRecebemValores) {
             if (deputado instanceof Estadual) {
-                ((Estadual) deputado).getUf();
+                System.out.println(((Estadual) deputado).getUf());
             } else if (deputado instanceof Federal) {
-                ((Federal) deputado).getNumeroCadastro();
+                System.out.println(((Federal) deputado).getNumeroCadastro());
+            }
+        }
+
+        System.out.println("Deputados que desviam verbas:");
+        for (Deputado deputado : deputadosDesviamVerbas) {
+            if (deputado instanceof Estadual) {
+                System.out.println(((Estadual) deputado).getUf());
+            } else if (deputado instanceof Federal) {
+                System.out.println(((Federal) deputado).getNumeroCadastro());
             }
         }
 
