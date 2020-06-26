@@ -14,4 +14,12 @@ public class Deputado {
         this.salarioLiquido = salarioLiquido;
         this.funcionarios = funcionarios;
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 }
