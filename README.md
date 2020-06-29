@@ -4,12 +4,12 @@ Programa referente a prova de Algoritmos e Programação da faculdade Unisinos n
 
 ## Descrição
 
-    O programa é responsável por listar os Deputados (Estaduais e Federais) que são corruptos dentro do governo.
-    Existem 03 regras que o programa considera como corrupção.
+O programa é responsável por listar os Deputados (Estaduais e Federais) que são corruptos dentro do governo.
+Existem 03 regras que o programa considera como corrupção.
 
-    - Deputado com mais de 10 funcionários.
-    - Deputado cujo salário liquido é > 80% do salário bruto.
-    - Deputado cujo ao menos um funcionário recebe menos que 70% do salário bruto.
+- Deputado com mais de 10 funcionários.
+- Deputado cujo salário liquido é > 80% do salário bruto.
+- Deputado cujo ao menos um funcionário recebe menos que 70% do salário bruto.
 
 
 ## Começando
